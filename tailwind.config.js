@@ -1,18 +1,64 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,jsx,ts,tsx,json}"
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        red: {
+          '50': '#fdf2f2',
+          '100': '#fde8e8',
+          '200': '#fbd5d5',
+          '300': '#f8b4b4',
+          '400': '#f98080',
+          '500': '#f05252',
+          '600': '#e02424',
+          '700': '#c81e1e',
+          '800': '#9b1c1c',
+          '900': '#771d1d',
+        },
+        green: {
+          '50': '#f0fdf4',
+          '100': '#dcfce7',
+          '200': '#bbf7d0',
+          '300': '#86efac',
+          '400': '#4ade80',
+          '500': '#22c55e',
+          '600': '#16a34a',
+          '700': '#15803d',
+          '800': '#166534',
+          '900': '#14532d',
+        },
+        yellow: {
+          '50': '#fdfdea',
+          '100': '#fdf6b2',
+          '200': '#fce96a',
+          '300': '#faca15',
+          '400': '#e3a008',
+          '500': '#c27803',
+          '600': '#9f580a',
+          '700': '#8e4b10',
+          '800': '#723b13',
+          '900': '#633112',
+        },
+        purple: {
+          '50': '#faf5ff',
+          '100': '#f3e8ff',
+          '200': '#e9d5ff',
+          '300': '#d8b4fe',
+          '400': '#c084fc',
+          '500': '#a855f7',
+          '600': '#9333ea',
+          '700': '#7e22ce',
+          '800': '#6b21a8',
+          '900': '#581c87',
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
